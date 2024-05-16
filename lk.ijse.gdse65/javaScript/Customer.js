@@ -137,10 +137,6 @@
 //     loadAllCustomer();
 // });
 
-
-
-
-
 $(document).ready(function (){
     // Function to load all customers
     const loadAllCustomer = () => {

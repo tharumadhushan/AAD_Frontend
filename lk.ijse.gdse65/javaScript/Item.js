@@ -5,6 +5,9 @@ $(document).ready(function () {
             url: "http://localhost:8080/shop/api/v1/item",
             method: "GET",
             dataType: "json",
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (resp) {
                 for (const item of resp) {
                     let row = `<tr><td>${item.item_code}</td>
@@ -52,6 +55,9 @@ $(document).ready(function () {
             url: "http://localhost:8080/shop/api/v1/item",
             contentType: "application/json",
             data: JSON.stringify(formData),
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (data) {
                 reset();
                 alert("Item saved successfully.");
@@ -76,6 +82,9 @@ $(document).ready(function () {
             url: "http://localhost:8080/shop/api/v1/item/" + formData.item_code,
             contentType: "application/json",
             data: JSON.stringify(formData),
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (data) {
                 reset();
                 alert("Item updated successfully.");
@@ -93,6 +102,9 @@ $(document).ready(function () {
         $.ajax({
             method: "DELETE",
             url: "http://localhost:8080/shop/api/v1/item/" + item_id,
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (data) {
                 reset();
                 alert("Item deleted successfully.");

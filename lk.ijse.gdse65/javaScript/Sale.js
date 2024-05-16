@@ -8,6 +8,9 @@ const loadAllInventoryCode = () => {
         method: "GET",
         processData: false,
         contentType: false,
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem("accessToken")
+        },
         success: function (resp) {
             console.log(resp);
             for (const inventory of resp) {
@@ -44,6 +47,9 @@ const loadAllCustomerName = () => {
         method: "GET",
         processData: false,
         contentType: false,
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem("accessToken")
+        },
         success: function (resp) {
             console.log(resp);
             for (const customer of resp) {
@@ -208,6 +214,9 @@ $("#place_ord").click(function () {
         processData: false,
         contentType: false,
         data: formData,
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem("accessToken")
+        },
         success: function (data) {
             reset();
             alert("Order saved successfully.");
@@ -224,6 +233,9 @@ const loadAllOrders = () => {
         url: "http://localhost:8080/POS_system_spring_war_exploded/api/v1/order",
         method: "GET",
         dataType: "json",
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem("accessToken")
+        },
         success: function (resp) {
             console.log(resp);
             for (const order of resp) {

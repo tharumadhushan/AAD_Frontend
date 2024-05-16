@@ -5,6 +5,9 @@ $(document).ready(function (){
             url: "http://localhost:8080/shop/api/v1/employee",
             method: "GET",
             dataType: "json",
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (resp) {
                 for (const employee of resp) {
                     let row = `<tr><td>${employee.employeeId}</td><td>${employee.employeeName}</td><td>${employee.gender}</td><td>${employee.role}</td>
@@ -78,6 +81,9 @@ $(document).ready(function (){
                 processData: false, // Prevent jQuery from automatically processing data
                 contentType: false, // Prevent jQuery from automatically setting contentType
                 data: formData,
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem("accessToken")
+                },
                 success: function (data) {
                     reset(); // Assuming reset() function is defined elsewhere
                     alert("Employee saved successfully.");
@@ -123,11 +129,14 @@ $(document).ready(function (){
         }
 
         $.ajax({
-            method: "PATCH", // Change method to PUT
+            method: "PATCH",
             url: "http://localhost:8080/shop/api/v1/employee", // Include employee ID in URL
             processData: false,
             contentType: false,
             data: formData,
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (data) {
                 reset(); // Assuming reset() function is defined elsewhere
                 alert("Employee updated successfully.");
@@ -146,6 +155,9 @@ $(document).ready(function (){
         $.ajax({
             method: "DELETE",
             url: "http://localhost:8080/shop/api/v1/employee/" + empID,
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (data) {
                 reset();
                 alert("Employee deleted successfully.");

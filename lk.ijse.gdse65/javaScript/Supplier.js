@@ -5,6 +5,9 @@ $(document).ready(function (){
             url: "http://localhost:8080/shop/api/v1/suppliers",
             method: "GET",
             dataType: "json",
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (resp) {
                 for (const supplier of resp) {
                     let row = `<tr><td>${supplier.supplier_id}</td><td>${supplier.supplier_name}</td><td>${supplier.category}</td><td>${supplier.address_line_01}</td><td>${supplier.address_line_02}</td><td>${supplier.address_line_03}</td><td>${supplier.address_line_04}</td><td>${supplier.address_line_05}</td><td>${supplier.address_line_06}</td>
@@ -70,6 +73,9 @@ $(document).ready(function (){
             url: "http://localhost:8080/shop/api/v1/suppliers",
             contentType: "application/json",
             data: JSON.stringify(formData),
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (data) {
                 reset();
                 alert("Supplier saved successfully.");
@@ -101,6 +107,9 @@ $(document).ready(function (){
             url: "http://localhost:8080/shop/api/v1/suppliers",
             contentType: "application/json",
             data: JSON.stringify(formData),
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (data) {
                 reset();
                 alert("Supplier updated successfully.");
@@ -117,6 +126,9 @@ $(document).ready(function (){
         $.ajax({
             method: "DELETE",
             url: "http://localhost:8080/shop/api/v1/suppliers/" + supplier_id,
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("accessToken")
+            },
             success: function (data) {
                 reset();
                 alert("Supplier deleted successfully.");
