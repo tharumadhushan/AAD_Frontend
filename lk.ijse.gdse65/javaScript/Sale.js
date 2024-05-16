@@ -1,7 +1,7 @@
 
 const loadAllInventoryCode = () => {
-    $('#item_id_sale').empty();
-    $('#item_id_sale').append("<option selected>Select item code</option>");
+    $('#sale_item_id').empty();
+    $('#sale_item_id').append("<option selected>Select item code</option>");
 
     $.ajax({
         url: "http://localhost:8080/shop/api/v1/inventory",
@@ -16,7 +16,7 @@ const loadAllInventoryCode = () => {
             for (const inventory of resp) {
                 let option = `<option data-description="${inventory.item_desc}" data-unitPrice="${inventory.unit_price_sale}" data-qty="${inventory.item_qty}">${inventory.item_code}</option>;`
 
-                $("#item_id_sale").append(option);
+                $("#sale_item_id").append(option);
             }
         },
         error: function (xhr, exception) {
@@ -25,7 +25,7 @@ const loadAllInventoryCode = () => {
     });
 }
 
-$('#item_id_sale').change((e) => {
+$('#sale_item_id').change((e) => {
     const item_id_sale = e.target.value;
     if ('Select item code' !== item_id_sale) {
         const description = e.target.options[e.target.selectedIndex].getAttribute('data-description');
@@ -39,8 +39,8 @@ $('#item_id_sale').change((e) => {
     }
 })
 const loadAllCustomerName = () => {
-    $('#customer_name').empty();
-    $('#customer_name').append("<option selected>Select customer name</option>");
+    $('#customer-id').empty();
+    $('#customer-id').append("<option selected>Select customer id</option>");
 
     $.ajax({
         url: "http://localhost:8080/shop/api/v1/customer",
@@ -53,16 +53,24 @@ const loadAllCustomerName = () => {
         success: function (resp) {
             console.log(resp);
             for (const customer of resp) {
-                let option = `<option>${customer.customer_name}</option>;`
+                let option = `<option data-name="${customer.customer_name}">${customer.customer_code}</option>;`
 
-                $("#customer_name").append(option);
+                $("#customer-id").append(option);
             }
         },
         error: function (xhr, exception) {
-            console.log("Error loading item codes:", exception);
+            console.log("Error loading customer codes:", exception);
         }
     });
-}
+};
+
+$('#customer-id').change((e) => {
+    const cust_code = e.target.value;
+    if ('Select customer code' !== cust_code) {
+        const name = e.target.options[e.target.selectedIndex].dataset.name;
+        $('#customer_name').val(name);
+    }
+});
 loadAllInventoryCode();
 loadAllCustomerName();
 
