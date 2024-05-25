@@ -2,7 +2,7 @@ $(document).ready(function (){
     const loadAllSuppliers = () => {
         $("#supplier-tbl-body").empty();
         $.ajax({
-            url: "http://localhost:8080/shop/api/v1/suppliers",
+            url: "http://localhost:8081/shop/api/v1/suppliers",
             method: "GET",
             dataType: "json",
             headers: {
@@ -70,7 +70,7 @@ $(document).ready(function (){
 
         $.ajax({
             method: "POST",
-            url: "http://localhost:8080/shop/api/v1/suppliers",
+            url: "http://localhost:8081/shop/api/v1/suppliers",
             contentType: "application/json",
             data: JSON.stringify(formData),
             headers: {
@@ -104,7 +104,7 @@ $(document).ready(function (){
 
         $.ajax({
             method: "PATCH",
-            url: "http://localhost:8080/shop/api/v1/suppliers",
+            url: "http://localhost:8081/shop/api/v1/suppliers",
             contentType: "application/json",
             data: JSON.stringify(formData),
             headers: {
@@ -125,7 +125,7 @@ $(document).ready(function (){
 
         $.ajax({
             method: "DELETE",
-            url: "http://localhost:8080/shop/api/v1/suppliers/" + supplier_id,
+            url: "http://localhost:8081/shop/api/v1/suppliers/" + supplier_id,
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("accessToken")
             },

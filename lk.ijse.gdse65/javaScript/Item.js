@@ -2,7 +2,7 @@ $(document).ready(function () {
     function loadAllItems() {
         $("#item-tbl-body").empty();
         $.ajax({
-            url: "http://localhost:8080/shop/api/v1/item",
+            url: "http://localhost:8081/shop/api/v1/item",
             method: "GET",
             dataType: "json",
             headers: {
@@ -52,7 +52,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: "POST",
-            url: "http://localhost:8080/shop/api/v1/item",
+            url: "http://localhost:8081/shop/api/v1/item",
             contentType: "application/json",
             data: JSON.stringify(formData),
             headers: {
@@ -79,7 +79,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: "PATCH",
-            url: "http://localhost:8080/shop/api/v1/item/" + formData.item_code,
+            url: "http://localhost:8081/shop/api/v1/item/" + formData.item_code,
             contentType: "application/json",
             data: JSON.stringify(formData),
             headers: {
@@ -101,7 +101,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: "DELETE",
-            url: "http://localhost:8080/shop/api/v1/item/" + item_id,
+            url: "http://localhost:8081/shop/api/v1/item/" + item_id,
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("accessToken")
             },

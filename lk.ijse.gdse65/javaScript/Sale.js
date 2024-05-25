@@ -269,7 +269,7 @@ const loadAllInventoryCode = () => {
     $('#sale_item_id').append("<option selected>Select item code</option>");
 
     $.ajax({
-        url: "http://localhost:8080/shop/api/v1/inventory",
+        url: "http://localhost:8081/shop/api/v1/inventory",
         method: "GET",
         processData: false,
         contentType: false,
@@ -304,11 +304,11 @@ $('#sale_item_id').change((e) => {
 });
 
 const loadAllCustomerName = () => {
-    $('#customer-id').empty();
-    $('#customer-id').append("<option selected>Select customer id</option>");
+    $('#sale_cust_name').empty();
+    $('#sale_cust_name').append("<option selected>Select customer name</option>");
 
     $.ajax({
-        url: "http://localhost:8080/shop/api/v1/customer",
+        url: "http://localhost:8081/shop/api/v1/customer",
         method: "GET",
         processData: false,
         contentType: false,
@@ -318,26 +318,45 @@ const loadAllCustomerName = () => {
         success: function (resp) {
             console.log(resp);
             for (const customer of resp) {
-                let option = `<option data-name="${customer.customer_name}">${customer.customer_code}</option>;`
-                $("#customer-id").append(option);
+                let option = `<option >${customer.customer_name}</option>;`
+                $("#sale_cust_name").append(option);
             }
         },
         error: function (xhr, exception) {
-            console.log("Error loading customer codes:", exception);
+            console.log("Error loading customer names:", exception);
         }
     });
 };
 
-$('#customer-id').change((e) => {
-    const cust_code = e.target.value;
-    if ('Select customer code' !== cust_code) {
-        const name = e.target.options[e.target.selectedIndex].dataset.name;
-        $('#customer_name').val(name);
-    }
-});
+const loadAllEmployeeName = () => {
+    $('#cashier_name').empty();
+    $('#cashier_name').append("<option selected>Select employee name</option>");
+
+    $.ajax({
+        url: "http://localhost:8081/shop/api/v1/employee",
+        method: "GET",
+        processData: false,
+        contentType: false,
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem("accessToken")
+        },
+        success: function (resp) {
+            console.log(resp);
+            for (const employee of resp) {
+                let option = `<option >${employee.employeeName}</option>;`
+                $("#cashier_name").append(option);
+            }
+        },
+        error: function (xhr, exception) {
+            console.log("Error loading employee names:", exception);
+        }
+    });
+};
+
 
 loadAllInventoryCode();
 loadAllCustomerName();
+loadAllEmployeeName();
 
 $("#add_cart").click(function () {
     addToCart();
@@ -473,26 +492,30 @@ $("#remove").click(function () {
 });
 
 $("#place_ord").click(function () {
-    let formData = new FormData();
-    formData.append("order_id", $("#order_id").val());
-    formData.append("customer_id", $("#customer_id").val());
-    formData.append("customer_name", $("#customer_name").val());
-    formData.append("order_item_id", $("#order_item_id").val());
-    formData.append("description", $("#description").val());
-    formData.append("total", $("#final_total").val());
+    let formData = {
+        order_no: $("#order_id").val(),
+        item_code: $(".item_id").val(),
+        customer_name: $("#sale_cust_name").val(),
+        item_desc: $(".desc").val(),
+        size: $("#sale_size").val(),
+        unit_price: $(".total").val(),
+        item_qty: $(".qty").val(),
+        total_price: $("#order_qty").val(),
+        purchase_date: $("#purch_date").val(),
+        payment_method: $("#payment").val(),
+        added_points: $("#add_point").val(),
+        cashier_name: $("#cashier_name").val()
+    };
 
     $.ajax({
         method: "POST",
-        url: "http://localhost:8080/POS_system_spring_war_exploded/api/v1/order",
-        async: true,
-        processData: false,
-        contentType: false,
-        data: formData,
+        url: "http://localhost:8081/shop/api/v1/sale",
+        contentType: "application/json",
+        data: JSON.stringify(formData),
         headers: {
             "Authorization": "Bearer " + localStorage.getItem("accessToken")
         },
         success: function (data) {
-            reset();
             alert("Order saved successfully.");
         },
         error: function (xhr, status, error) {
@@ -501,10 +524,12 @@ $("#place_ord").click(function () {
     });
 });
 
+
+
 const loadAllOrders = () => {
     $("#place-tbl-body").empty();
     $.ajax({
-        url: "http://localhost:8080/POS_system_spring_war_exploded/api/v1/order",
+        url: "http://localhost:8081/shop/api/v1/order",
         method: "GET",
         dataType: "json",
         headers: {
