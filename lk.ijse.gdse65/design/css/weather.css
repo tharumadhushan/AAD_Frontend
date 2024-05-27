@@ -1,0 +1,12 @@
+#weather {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    /*margin: 50px auto;*/
+    text-align: left;
+}
+.transparent{
+    position: relative;
+    bottom: 6vw;
+}

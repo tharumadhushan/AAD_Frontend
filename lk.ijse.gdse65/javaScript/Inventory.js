@@ -259,7 +259,7 @@ const loadAllItemCode = () => {
     $('#item_code').append("<option selected>Select item code</option>");
 
     $.ajax({
-        url: "http://localhost:8080/shop/api/v1/item",
+        url: "http://localhost:8081/shop/api/v1/item",
         method: "GET",
         headers: {
             "Authorization": "Bearer " + localStorage.getItem("accessToken")
@@ -290,7 +290,7 @@ $(document).ready(function () {
     function loadAllInventory() {
         $("#inventory-tbl-body").empty();
         $.ajax({
-            url: "http://localhost:8080/shop/api/v1/inventory",
+            url: "http://localhost:8081/shop/api/v1/inventory",
             method: "GET",
             dataType: "json",
             headers: {
@@ -369,7 +369,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: "POST",
-            url: "http://localhost:8080/shop/api/v1/inventory",
+            url: "http://localhost:8081/shop/api/v1/inventory",
             processData: false,
             contentType: false,
             data: formData,
@@ -411,7 +411,7 @@ $(document).ready(function () {
 
         $.ajax({
             method: "PATCH",
-            url: "http://localhost:8080/shop/api/v1/inventory",
+            url: "http://localhost:8081/shop/api/v1/inventory",
             processData: false,
             contentType: false,
             data: formData,
