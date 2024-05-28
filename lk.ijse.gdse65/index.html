@@ -917,105 +917,331 @@
 
             </section>
 
+<!--            <section id="order" class="order">-->
+<!--                <section>-->
+<!--                    <section id="order_form">-->
+<!--                        <p class="h2">Place order form</p>-->
+<!--                        <form>-->
+<!--                            <div class="mb-3">-->
+<!--                                <label for="order_id" class="form-label">Order ID</label>-->
+<!--                                <input type="text" class="form-control" id="order_id"-->
+<!--                                       aria-describedby="emailHelp">-->
+<!--                            </div>-->
+
+<!--                            <div class="form-group">-->
+<!--                                <label for="customer_id">Customer ID</label>-->
+<!--                                <select class="form-control" id="customer_id">-->
+<!--                                </select>-->
+<!--                            </div>-->
+
+<!--                            <div class="mb-3">-->
+<!--                                <label for="customer_name" class="form-label">Customer Name</label>-->
+<!--                                <input type="text" class="form-control" id="customer_name"-->
+<!--                                       aria-describedby="emailHelp" readonly>-->
+<!--                            </div>-->
+<!--                            <div class="form-group">-->
+<!--                                <label for="order_item_id">Item ID</label>-->
+<!--                                <select class="form-control" id="order_item_id">-->
+<!--                                </select>-->
+<!--                            </div>-->
+
+<!--                            <div class="mb-3">-->
+<!--                                <label for="description" class="form-label">Description </label>-->
+<!--                                <input type="text" class="form-control" id="description"-->
+<!--                                       aria-describedby="emailHelp" readonly>-->
+<!--                            </div>-->
+<!--                            <div class="mb-3">-->
+<!--                                <label for="orSize" class="form-label">Size </label>-->
+<!--                                <input type="text" class="form-control" id="orSize"-->
+<!--                                       aria-describedby="emailHelp" readonly>-->
+<!--                            </div>-->
+
+<!--                            <div class="mb-3">-->
+<!--                                <label for="unit_price" class="form-label">Unit Price </label>-->
+<!--                                <input type="number" class="form-control" id="unit_price"-->
+<!--                                       aria-describedby="emailHelp" readonly>-->
+<!--                            </div>-->
+
+<!--                            <section id="order_details" class="row g-3">-->
+<!--                                <div class="col-auto">-->
+<!--                                    <label for="qty_on_hand" class="form-label">Qty. on hand </label>-->
+<!--                                    <input type="number" class="form-control" id="qty_on_hand"-->
+<!--                                           aria-describedby="emailHelp" readonly>-->
+<!--                                </div>-->
+
+
+<!--                                <div class="col-auto">-->
+<!--                                    <label for="order_qty" class="form-label">Qty.</label>-->
+<!--                                    <input type="number" class="form-control" id="order_qty"-->
+<!--                                           aria-describedby="emailHelp">-->
+<!--                                </div>-->
+<!--                                <div class="mb-3">-->
+<!--                                    <label for="purchDate" class="form-label">Purchase Date</label>-->
+<!--                                    <input id="purchDate" type="date" class="form-control" aria-describedby="emailHelp" placeholder="mm/dd/yyyy">-->
+<!--                                </div>-->
+<!--                            </section>-->
+
+<!--                            <button id="add_cart" type="button" class="btn btn-outline-success">+ Add to Cart</button>-->
+<!--                            <button id="remove" type="button" class="btn btn-outline-danger">Remove</button>-->
+<!--                        </form>-->
+<!--                    </section>-->
+<!--                </section>-->
+<!--                <section id="order_table">-->
+<!--                    <div></div>-->
+<!--                    <table class="table">-->
+<!--                        <thead>-->
+<!--                        <tr>-->
+<!--                            <th scope="col">Item ID</th>-->
+<!--                            <th scope="col">Desc</th>-->
+<!--                            <th scope="col">Qty</th>-->
+<!--                            <th scope="col">Total</th>-->
+<!--                            <th scope="col">Size</th>-->
+
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody id="order_table_body">-->
+<!--                        <tr>-->
+<!--                            <td id="itemID"></td>-->
+<!--                            <td id="desc"></td>-->
+<!--                            <td id="qty"></td>-->
+<!--                            <td id="total"></td>-->
+<!--                            <td id="oSize"></td>-->
+<!--                        </tr>-->
+
+<!--                        </tbody>-->
+<!--                    </table>-->
+
+
+<!--                    <section class="row g-3">-->
+
+<!--                        <div class="col-auto">-->
+<!--                            <label for="final_total" class="form-label">Total</label>-->
+<!--                            <input id="final_total" type="text" class="form-control" id="final_total"-->
+<!--                                   aria-describedby="emailHelp">-->
+<!--                        </div>-->
+
+<!--                        <div class="col-md-4">-->
+<!--                            <label for="payment" class="form-label">Payment</label>-->
+<!--                            <select id="payment" class="form-select">-->
+<!--                                <option selected>Choose...</option>-->
+<!--                                <option value="Card">Card</option>-->
+<!--                                <option value="Cash">Cash</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="employee_name">Employee Name</label>-->
+<!--                            <select class="form-control" id="employee_name">-->
+<!--                            </select>-->
+<!--                        </div>-->
+<!--                        <div class="col-auto">-->
+<!--                            <label for="employee_code" class="form-label">Employee ID</label>-->
+<!--                            <input type="text" class="form-control" id="employee_code"-->
+<!--                                   aria-describedby="emailHelp">-->
+<!--                        </div>-->
+<!--                        <button id="place_ord" type="button" class="btn btn-outline-success">Place Order</button>-->
+<!--                    </section>-->
+
+
+<!--                </section>-->
+
+<!--            </section>-->
+<!--**************************************************************************************************************************************-->
+<!--            <section id="order" class="order">-->
+<!--                <section id="order_form">-->
+<!--                    <p class="h2">Place Order Form</p>-->
+<!--                    <form>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label for="order_id" class="form-label">Order ID</label>-->
+<!--                            <input type="text" class="form-control" id="order_id">-->
+<!--                        </div>-->
+
+<!--                        <div class="form-group">-->
+<!--                            <label for="customer_id">Customer ID</label>-->
+<!--                            <select class="form-control" id="customer_id"></select>-->
+<!--                        </div>-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label for="customer_name" class="form-label">Customer Name</label>-->
+<!--                            <input type="text" class="form-control" id="customer_name" readonly>-->
+<!--                        </div>-->
+
+<!--                        <div class="form-group">-->
+<!--                            <label for="order_item_id">Item ID</label>-->
+<!--                            <select class="form-control" id="order_item_id"></select>-->
+<!--                        </div>-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label for="description" class="form-label">Description</label>-->
+<!--                            <input type="text" class="form-control" id="description" readonly>-->
+<!--                        </div>-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label for="orSize" class="form-label">Size</label>-->
+<!--                            <input type="text" class="form-control" id="orSize" readonly>-->
+<!--                        </div>-->
+
+<!--                        <div class="mb-3">-->
+<!--                            <label for="unit_price" class="form-label">Unit Price</label>-->
+<!--                            <input type="number" class="form-control" id="unit_price" readonly>-->
+<!--                        </div>-->
+
+<!--                        <section id="order_details" class="row g-3">-->
+<!--                            <div class="col-auto">-->
+<!--                                <label for="qty_on_hand" class="form-label">Qty. on Hand</label>-->
+<!--                                <input type="number" class="form-control" id="qty_on_hand" readonly>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-auto">-->
+<!--                                <label for="order_qty" class="form-label">Qty.</label>-->
+<!--                                <input type="number" class="form-control" id="order_qty">-->
+<!--                            </div>-->
+
+<!--                            <div class="mb-3">-->
+<!--                                <label for="purchDate" class="form-label">Purchase Date</label>-->
+<!--                                <input id="purchDate" type="date" class="form-control" placeholder="mm/dd/yyyy">-->
+<!--                            </div>-->
+<!--                        </section>-->
+
+<!--                        <button id="add_cart" type="button" class="btn btn-outline-success">+ Add to Cart</button>-->
+<!--                        <button id="remove" type="button" class="btn btn-outline-danger">Remove</button>-->
+<!--                    </form>-->
+<!--                </section>-->
+
+<!--                <section id="order_table">-->
+<!--                    <table class="table">-->
+<!--                        <thead>-->
+<!--                        <tr>-->
+<!--                            <th scope="col">Item ID</th>-->
+<!--                            <th scope="col">Desc</th>-->
+<!--                            <th scope="col">Qty</th>-->
+<!--                            <th scope="col">Total</th>-->
+<!--                            <th scope="col">Size</th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody id="order_table_body"></tbody>-->
+<!--                    </table>-->
+
+<!--                    <section class="row g-3">-->
+<!--                        <div class="col-auto">-->
+<!--                            <label for="final_total" class="form-label">Total</label>-->
+<!--                            <input id="final_total" type="text" class="form-control" readonly>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-md-4">-->
+<!--                            <label for="payment" class="form-label">Payment</label>-->
+<!--                            <select id="payment" class="form-select">-->
+<!--                                <option selected>Choose...</option>-->
+<!--                                <option value="Card">Card</option>-->
+<!--                                <option value="Cash">Cash</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label for="point" class="form-label">Point</label>-->
+<!--                            <input type="number" class="form-control" id="point">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="employee_name">Employee Name</label>-->
+<!--                            <select class="form-control" id="employee_name"></select>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-auto">-->
+<!--                            <label for="employee_code" class="form-label">Employee ID</label>-->
+<!--                            <input type="text" class="form-control" id="employee_code" readonly>-->
+<!--                        </div>-->
+
+<!--                        <button id="place_ord" type="button" class="btn btn-outline-success">Place Order</button>-->
+<!--                    </section>-->
+<!--                </section>-->
+<!--            </section>-->
+
+
             <section id="order" class="order">
-                <section>
-                    <section id="order_form">
-                        <p class="h2">Place order form</p>
-                        <form>
+                <section id="order_form">
+                    <p class="h2">Place Order Form</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="order_id" class="form-label">Order ID</label>
+                            <input type="text" class="form-control" id="order_id">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customer_id">Customer ID</label>
+                            <select class="form-control" id="customer_id"></select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="customer_name" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control" id="customer_name" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="order_item_id">Item ID</label>
+                            <select class="form-control" id="order_item_id"></select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <input type="text" class="form-control" id="description" readonly>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="orSize" class="form-label">Size</label>
+                            <input type="text" class="form-control" id="orSize" readonly>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="unit_price" class="form-label">Unit Price</label>
+                            <input type="number" class="form-control" id="unit_price" readonly>
+                        </div>
+
+                        <section id="order_details" class="row g-3">
+                            <div class="col-auto">
+                                <label for="qty_on_hand" class="form-label">Qty. on Hand</label>
+                                <input type="number" class="form-control" id="qty_on_hand" readonly>
+                            </div>
+
+                            <div class="col-auto">
+                                <label for="order_qty" class="form-label">Qty.</label>
+                                <input type="number" class="form-control" id="order_qty">
+                            </div>
+
                             <div class="mb-3">
-                                <label for="order_id" class="form-label">Order ID</label>
-                                <input type="text" class="form-control" id="order_id"
-                                       aria-describedby="emailHelp">
+                                <label for="purchDate" class="form-label">Purchase Date</label>
+                                <input id="purchDate" type="date" class="form-control" placeholder="mm/dd/yyyy">
                             </div>
+                        </section>
 
-                            <div class="form-group">
-                                <label for="customer_id">Customer ID</label>
-                                <select class="form-control" id="customer_id">
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="customer_name" class="form-label">Customer Name</label>
-                                <input type="text" class="form-control" id="customer_name"
-                                       aria-describedby="emailHelp" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="order_item_id">Item ID</label>
-                                <select class="form-control" id="order_item_id">
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="description" class="form-label">Description </label>
-                                <input type="text" class="form-control" id="description"
-                                       aria-describedby="emailHelp" readonly>
-                            </div>
-                            <div class="mb-3">
-                                <label for="orSize" class="form-label">Size </label>
-                                <input type="text" class="form-control" id="orSize"
-                                       aria-describedby="emailHelp" readonly>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="unit_price" class="form-label">Unit Price </label>
-                                <input type="number" class="form-control" id="unit_price"
-                                       aria-describedby="emailHelp" readonly>
-                            </div>
-
-                            <section id="order_details" class="row g-3">
-                                <div class="col-auto">
-                                    <label for="qty_on_hand" class="form-label">Qty. on hand </label>
-                                    <input type="number" class="form-control" id="qty_on_hand"
-                                           aria-describedby="emailHelp" readonly>
-                                </div>
-
-
-                                <div class="col-auto">
-                                    <label for="order_qty" class="form-label">Qty.</label>
-                                    <input type="number" class="form-control" id="order_qty"
-                                           aria-describedby="emailHelp">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="purchDate" class="form-label">Purchase Date</label>
-                                    <input id="purchDate" type="date" class="form-control" aria-describedby="emailHelp" placeholder="mm/dd/yyyy">
-                                </div>
-                            </section>
-
-                            <button id="add_cart" type="button" class="btn btn-outline-success">+ Add to Cart</button>
-                            <button id="remove" type="button" class="btn btn-outline-danger">Remove</button>
-                        </form>
-                    </section>
+                        <button id="add_cart" type="button" class="btn btn-outline-success">+ Add to Cart</button>
+                        <button id="remove" type="button" class="btn btn-outline-danger">Remove</button>
+                    </form>
                 </section>
+
                 <section id="order_table">
-                    <div></div>
                     <table class="table">
                         <thead>
                         <tr>
-                            <td class="item_id">Item_ID</td>
-                            <td class="desc">Description</td>
-                            <td class="qty">Qty</td>
-                            <td class="total">Total</td>
-
+                            <th scope="col">Item ID</th>
+                            <th scope="col">Desc</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">unitPrice</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Size</th>
                         </tr>
                         </thead>
                         <tbody id="order_table_body">
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
+<!--                            <td class="item_id"></td>-->
+<!--                            <td class="desc"></td>-->
+<!--                            <td class="qty"></td>-->
+<!--                            <td class="unitprice"></td>-->
+<!--                            <td class="total"></td>-->
+<!--                            <td class="oSize"></td>-->
                         </tbody>
                     </table>
 
-
                     <section class="row g-3">
-
                         <div class="col-auto">
                             <label for="final_total" class="form-label">Total</label>
-                            <input id="final_total" type="text" class="form-control" id="final_total"
-                                   aria-describedby="emailHelp">
+                            <input id="final_total" type="text" class="form-control" readonly>
                         </div>
 
                         <div class="col-md-4">
@@ -1026,24 +1252,24 @@
                                 <option value="Cash">Cash</option>
                             </select>
                         </div>
+                        <div class="mb-3">
+                            <label for="point" class="form-label">Point</label>
+                            <input type="number" class="form-control" id="point">
+                        </div>
                         <div class="form-group">
                             <label for="employee_name">Employee Name</label>
-                            <select class="form-control" id="employee_name">
-                            </select>
+                            <select class="form-control" id="employee_name"></select>
                         </div>
+
                         <div class="col-auto">
                             <label for="employee_code" class="form-label">Employee ID</label>
-                            <input type="text" class="form-control" id="employee_code"
-                                   aria-describedby="emailHelp">
+                            <input type="text" class="form-control" id="employee_code" readonly>
                         </div>
+
                         <button id="place_ord" type="button" class="btn btn-outline-success">Place Order</button>
                     </section>
-
-
                 </section>
-
             </section>
-
             <section id="place_order" class="order_details">
                 <section>
                     <div></div>
