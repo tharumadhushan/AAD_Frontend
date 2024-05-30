@@ -90,7 +90,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="#refund_form" id="refund_btn">
                     <i class="zmdi zmdi-grid"></i>
                     <span class="menu-title">Refund</span>
                 </a>
@@ -916,245 +916,6 @@
 
 
             </section>
-
-<!--            <section id="order" class="order">-->
-<!--                <section>-->
-<!--                    <section id="order_form">-->
-<!--                        <p class="h2">Place order form</p>-->
-<!--                        <form>-->
-<!--                            <div class="mb-3">-->
-<!--                                <label for="order_id" class="form-label">Order ID</label>-->
-<!--                                <input type="text" class="form-control" id="order_id"-->
-<!--                                       aria-describedby="emailHelp">-->
-<!--                            </div>-->
-
-<!--                            <div class="form-group">-->
-<!--                                <label for="customer_id">Customer ID</label>-->
-<!--                                <select class="form-control" id="customer_id">-->
-<!--                                </select>-->
-<!--                            </div>-->
-
-<!--                            <div class="mb-3">-->
-<!--                                <label for="customer_name" class="form-label">Customer Name</label>-->
-<!--                                <input type="text" class="form-control" id="customer_name"-->
-<!--                                       aria-describedby="emailHelp" readonly>-->
-<!--                            </div>-->
-<!--                            <div class="form-group">-->
-<!--                                <label for="order_item_id">Item ID</label>-->
-<!--                                <select class="form-control" id="order_item_id">-->
-<!--                                </select>-->
-<!--                            </div>-->
-
-<!--                            <div class="mb-3">-->
-<!--                                <label for="description" class="form-label">Description </label>-->
-<!--                                <input type="text" class="form-control" id="description"-->
-<!--                                       aria-describedby="emailHelp" readonly>-->
-<!--                            </div>-->
-<!--                            <div class="mb-3">-->
-<!--                                <label for="orSize" class="form-label">Size </label>-->
-<!--                                <input type="text" class="form-control" id="orSize"-->
-<!--                                       aria-describedby="emailHelp" readonly>-->
-<!--                            </div>-->
-
-<!--                            <div class="mb-3">-->
-<!--                                <label for="unit_price" class="form-label">Unit Price </label>-->
-<!--                                <input type="number" class="form-control" id="unit_price"-->
-<!--                                       aria-describedby="emailHelp" readonly>-->
-<!--                            </div>-->
-
-<!--                            <section id="order_details" class="row g-3">-->
-<!--                                <div class="col-auto">-->
-<!--                                    <label for="qty_on_hand" class="form-label">Qty. on hand </label>-->
-<!--                                    <input type="number" class="form-control" id="qty_on_hand"-->
-<!--                                           aria-describedby="emailHelp" readonly>-->
-<!--                                </div>-->
-
-
-<!--                                <div class="col-auto">-->
-<!--                                    <label for="order_qty" class="form-label">Qty.</label>-->
-<!--                                    <input type="number" class="form-control" id="order_qty"-->
-<!--                                           aria-describedby="emailHelp">-->
-<!--                                </div>-->
-<!--                                <div class="mb-3">-->
-<!--                                    <label for="purchDate" class="form-label">Purchase Date</label>-->
-<!--                                    <input id="purchDate" type="date" class="form-control" aria-describedby="emailHelp" placeholder="mm/dd/yyyy">-->
-<!--                                </div>-->
-<!--                            </section>-->
-
-<!--                            <button id="add_cart" type="button" class="btn btn-outline-success">+ Add to Cart</button>-->
-<!--                            <button id="remove" type="button" class="btn btn-outline-danger">Remove</button>-->
-<!--                        </form>-->
-<!--                    </section>-->
-<!--                </section>-->
-<!--                <section id="order_table">-->
-<!--                    <div></div>-->
-<!--                    <table class="table">-->
-<!--                        <thead>-->
-<!--                        <tr>-->
-<!--                            <th scope="col">Item ID</th>-->
-<!--                            <th scope="col">Desc</th>-->
-<!--                            <th scope="col">Qty</th>-->
-<!--                            <th scope="col">Total</th>-->
-<!--                            <th scope="col">Size</th>-->
-
-<!--                        </tr>-->
-<!--                        </thead>-->
-<!--                        <tbody id="order_table_body">-->
-<!--                        <tr>-->
-<!--                            <td id="itemID"></td>-->
-<!--                            <td id="desc"></td>-->
-<!--                            <td id="qty"></td>-->
-<!--                            <td id="total"></td>-->
-<!--                            <td id="oSize"></td>-->
-<!--                        </tr>-->
-
-<!--                        </tbody>-->
-<!--                    </table>-->
-
-
-<!--                    <section class="row g-3">-->
-
-<!--                        <div class="col-auto">-->
-<!--                            <label for="final_total" class="form-label">Total</label>-->
-<!--                            <input id="final_total" type="text" class="form-control" id="final_total"-->
-<!--                                   aria-describedby="emailHelp">-->
-<!--                        </div>-->
-
-<!--                        <div class="col-md-4">-->
-<!--                            <label for="payment" class="form-label">Payment</label>-->
-<!--                            <select id="payment" class="form-select">-->
-<!--                                <option selected>Choose...</option>-->
-<!--                                <option value="Card">Card</option>-->
-<!--                                <option value="Cash">Cash</option>-->
-<!--                            </select>-->
-<!--                        </div>-->
-<!--                        <div class="form-group">-->
-<!--                            <label for="employee_name">Employee Name</label>-->
-<!--                            <select class="form-control" id="employee_name">-->
-<!--                            </select>-->
-<!--                        </div>-->
-<!--                        <div class="col-auto">-->
-<!--                            <label for="employee_code" class="form-label">Employee ID</label>-->
-<!--                            <input type="text" class="form-control" id="employee_code"-->
-<!--                                   aria-describedby="emailHelp">-->
-<!--                        </div>-->
-<!--                        <button id="place_ord" type="button" class="btn btn-outline-success">Place Order</button>-->
-<!--                    </section>-->
-
-
-<!--                </section>-->
-
-<!--            </section>-->
-<!--**************************************************************************************************************************************-->
-<!--            <section id="order" class="order">-->
-<!--                <section id="order_form">-->
-<!--                    <p class="h2">Place Order Form</p>-->
-<!--                    <form>-->
-<!--                        <div class="mb-3">-->
-<!--                            <label for="order_id" class="form-label">Order ID</label>-->
-<!--                            <input type="text" class="form-control" id="order_id">-->
-<!--                        </div>-->
-
-<!--                        <div class="form-group">-->
-<!--                            <label for="customer_id">Customer ID</label>-->
-<!--                            <select class="form-control" id="customer_id"></select>-->
-<!--                        </div>-->
-
-<!--                        <div class="mb-3">-->
-<!--                            <label for="customer_name" class="form-label">Customer Name</label>-->
-<!--                            <input type="text" class="form-control" id="customer_name" readonly>-->
-<!--                        </div>-->
-
-<!--                        <div class="form-group">-->
-<!--                            <label for="order_item_id">Item ID</label>-->
-<!--                            <select class="form-control" id="order_item_id"></select>-->
-<!--                        </div>-->
-
-<!--                        <div class="mb-3">-->
-<!--                            <label for="description" class="form-label">Description</label>-->
-<!--                            <input type="text" class="form-control" id="description" readonly>-->
-<!--                        </div>-->
-
-<!--                        <div class="mb-3">-->
-<!--                            <label for="orSize" class="form-label">Size</label>-->
-<!--                            <input type="text" class="form-control" id="orSize" readonly>-->
-<!--                        </div>-->
-
-<!--                        <div class="mb-3">-->
-<!--                            <label for="unit_price" class="form-label">Unit Price</label>-->
-<!--                            <input type="number" class="form-control" id="unit_price" readonly>-->
-<!--                        </div>-->
-
-<!--                        <section id="order_details" class="row g-3">-->
-<!--                            <div class="col-auto">-->
-<!--                                <label for="qty_on_hand" class="form-label">Qty. on Hand</label>-->
-<!--                                <input type="number" class="form-control" id="qty_on_hand" readonly>-->
-<!--                            </div>-->
-
-<!--                            <div class="col-auto">-->
-<!--                                <label for="order_qty" class="form-label">Qty.</label>-->
-<!--                                <input type="number" class="form-control" id="order_qty">-->
-<!--                            </div>-->
-
-<!--                            <div class="mb-3">-->
-<!--                                <label for="purchDate" class="form-label">Purchase Date</label>-->
-<!--                                <input id="purchDate" type="date" class="form-control" placeholder="mm/dd/yyyy">-->
-<!--                            </div>-->
-<!--                        </section>-->
-
-<!--                        <button id="add_cart" type="button" class="btn btn-outline-success">+ Add to Cart</button>-->
-<!--                        <button id="remove" type="button" class="btn btn-outline-danger">Remove</button>-->
-<!--                    </form>-->
-<!--                </section>-->
-
-<!--                <section id="order_table">-->
-<!--                    <table class="table">-->
-<!--                        <thead>-->
-<!--                        <tr>-->
-<!--                            <th scope="col">Item ID</th>-->
-<!--                            <th scope="col">Desc</th>-->
-<!--                            <th scope="col">Qty</th>-->
-<!--                            <th scope="col">Total</th>-->
-<!--                            <th scope="col">Size</th>-->
-<!--                        </tr>-->
-<!--                        </thead>-->
-<!--                        <tbody id="order_table_body"></tbody>-->
-<!--                    </table>-->
-
-<!--                    <section class="row g-3">-->
-<!--                        <div class="col-auto">-->
-<!--                            <label for="final_total" class="form-label">Total</label>-->
-<!--                            <input id="final_total" type="text" class="form-control" readonly>-->
-<!--                        </div>-->
-
-<!--                        <div class="col-md-4">-->
-<!--                            <label for="payment" class="form-label">Payment</label>-->
-<!--                            <select id="payment" class="form-select">-->
-<!--                                <option selected>Choose...</option>-->
-<!--                                <option value="Card">Card</option>-->
-<!--                                <option value="Cash">Cash</option>-->
-<!--                            </select>-->
-<!--                        </div>-->
-<!--                        <div class="mb-3">-->
-<!--                            <label for="point" class="form-label">Point</label>-->
-<!--                            <input type="number" class="form-control" id="point">-->
-<!--                        </div>-->
-<!--                        <div class="form-group">-->
-<!--                            <label for="employee_name">Employee Name</label>-->
-<!--                            <select class="form-control" id="employee_name"></select>-->
-<!--                        </div>-->
-
-<!--                        <div class="col-auto">-->
-<!--                            <label for="employee_code" class="form-label">Employee ID</label>-->
-<!--                            <input type="text" class="form-control" id="employee_code" readonly>-->
-<!--                        </div>-->
-
-<!--                        <button id="place_ord" type="button" class="btn btn-outline-success">Place Order</button>-->
-<!--                    </section>-->
-<!--                </section>-->
-<!--            </section>-->
-
-
             <section id="order" class="order">
                 <section id="order_form">
                     <p class="h2">Place Order Form</p>
@@ -1270,34 +1031,58 @@
                     </section>
                 </section>
             </section>
-            <section id="place_order" class="order_details">
-                <section>
-                    <div></div>
-                    <table class="table">
+            <section id="refund_form">
+                <h2>Refund Processing Form</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="refund_desc" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="refund_desc">
+                    </div>
 
-                        <thead>
-                        <tr>
-                            <th scope="col">Order ID</th>
-                            <th scope="col">Customer ID</th>
-                            <th scope="col">Customer Name</th>
-                            <th scope="col">Item ID</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Total</th>
-                        </tr>
-                        </thead>
-                        <tbody id="place-tbl-body">
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="mb-3">
+                        <label for="refund_date" class="form-label">Refund Date</label>
+                        <input id="refund_date" type="date" class="form-control">
+                    </div>
 
-                </section>
+                    <div class="form-group">
+                        <label for="employeeRef">Employee Code</label>
+                        <select class="form-control" id="employeeRef">
+                            <option selected>Select Employee code</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="employeename" class="form-label">Employee Name</label>
+                        <input type="text" class="form-control" id="employeename" readonly>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="re_order_no" class="form-label">Refund Order No</label>
+                        <input type="text" class="form-control" id="re_order_no">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cusId" class="form-label">Customer ID</label>
+                        <input type="text" class="form-control" id="cusId">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cusName" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="cusName">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inventoryId" class="form-label">Inventory ID</label>
+                        <input type="text" class="form-control" id="inventoryId">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="refundedQuantity" class="form-label">Refunded Quantity</label>
+                        <input type="number" class="form-control" id="refundedQuantity">
+                    </div>
+
+                    <button id="process_refund" type="button" class="btn btn-primary">Process Refund</button>
+                </form>
             </section>
 
         </div>
@@ -1390,6 +1175,7 @@
 <script src="javaScript/Sale.js"></script>
 <script src="javaScript/Supplier.js"></script>
 <script src="javaScript/Weather.js"></script>
+<script src="javaScript/Refund.js"></script>
 
 
 </body>
