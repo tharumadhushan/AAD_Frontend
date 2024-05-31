@@ -96,7 +96,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="login.html">
+                <a class="nav-link" href="#adminPanel_form" id="admin_btn">
+                    <i class="zmdi zmdi-grid"></i>
+                    <span class="menu-title">Admin Panel</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logging.html">
                     <i class="zmdi zmdi-grid"></i>
                     <span class="menu-title">Logout</span>
                 </a>
@@ -183,13 +189,13 @@
                         <p id="temperature">Temperature: </p>
                         <p id="weatherDesc">Description: </p>
                     </div>
-                    <div class="col-md-6 grid-margin transparent">
-                        <div class="row">
+                    <div class="col-md-6 grid-margin transparent ">
+                        <div class="row" >
                             <div class="col-md-6 mb-4 stretch-card transparent">
                                 <div class="card card-tale">
                                     <div class="card-body">
-                                        <p class="mb-4">Today’s Bookings</p>
-                                        <p class="fs-30 mb-2">4006</p>
+                                        <p class="mb-4">Total Customer</p>
+                                        <p class="fs-30 mb-2" id="totalCustomersLabel"></p>
                                         <p>10.00% (30 days)</p>
                                     </div>
                                 </div>
@@ -197,8 +203,8 @@
                             <div class="col-md-6 mb-4 stretch-card transparent">
                                 <div class="card card-dark-blue">
                                     <div class="card-body">
-                                        <p class="mb-4">Total Bookings</p>
-                                        <p class="fs-30 mb-2">61344</p>
+                                        <p class="mb-4">Total Employee</p>
+                                        <p class="fs-30 mb-2" id="totalEmployeesLabel"></p>
                                         <p>22.00% (30 days)</p>
                                     </div>
                                 </div>
@@ -208,8 +214,8 @@
                             <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                                 <div class="card card-light-blue">
                                     <div class="card-body">
-                                        <p class="mb-4">Number of Meetings</p>
-                                        <p class="fs-30 mb-2">34040</p>
+                                        <p class="mb-4">Total Supplier</p>
+                                        <p class="fs-30 mb-2" id="totalSuppliersLabel"></p>
                                         <p>2.00% (30 days)</p>
                                     </div>
                                 </div>
@@ -217,8 +223,8 @@
                             <div class="col-md-6 stretch-card transparent">
                                 <div class="card card-light-danger">
                                     <div class="card-body">
-                                        <p class="mb-4">Number of Clients</p>
-                                        <p class="fs-30 mb-2">47033</p>
+                                        <p class="mb-4">Total Inventory</p>
+                                        <p class="fs-30 mb-2" id="totalInventorysLabel"></p>
                                         <p>0.22% (30 days)</p>
                                     </div>
                                 </div>
@@ -916,6 +922,7 @@
 
 
             </section>
+
             <section id="order" class="order">
                 <section id="order_form">
                     <p class="h2">Place Order Form</p>
@@ -1031,6 +1038,7 @@
                     </section>
                 </section>
             </section>
+
             <section id="refund_form">
                 <h2>Refund Processing Form</h2>
                 <form>
@@ -1083,6 +1091,84 @@
 
                     <button id="process_refund" type="button" class="btn btn-primary">Process Refund</button>
                 </form>
+            </section>
+
+            <section id="adminPanel_from" class="adminPanel_from">
+                <div class="card-content">
+                    <div class="row row-group m-0">
+                        <div class="col-12 col-lg-6 col-xl-3 border-light">
+                            <div class="card-body">
+                                <p class="mb-4">Total Profit</p>
+                                <p class="fs-30 mb-2" id="totalProfitLabel1"></p>
+                                <p>10.00% (30 days)</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 col-xl-3 border-light">
+                            <div class="card-body">
+                                <p class="mb-4">Total Sales</p>
+                                <p class="fs-30 mb-2" id="totalSalesLabel1"></p>
+                                <p>22.00% (30 days)</p>
+                                 </div>
+                        </div>
+                        <div class="col-12 col-lg-6 col-xl-3 border-light">
+                            <div class="card-body">
+                                <p class="mb-4">Most Popular Item</p>
+                                <p class="fs-30 mb-2" id="mostPopularItem1"></p>
+                                <p>2.00% (30 days)</p>
+                               </div>
+                        </div>
+                        <div class="col-12 col-lg-6 col-xl-3 border-light">
+                            <div class="card-body">
+                                <p class="mb-4">Most Popular Item Qty</p>
+                                <p class="fs-30 mb-2" id="mostPopularItemQty1"></p>
+                                <p>0.22% (30 days)</p>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 grid-margin admin_transparent ">
+                        <div class="row" >
+                            <div class="col-md-6 mb-4 stretch-card transparent">
+                                <div class="card card-tale">
+                                    <div class="card-body">
+                                        <p class="mb-4">Total Profit</p>
+                                        <p class="fs-30 mb-2" id="totalProfitLabel"></p>
+                                        <p>10.00% (30 days)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4 stretch-card transparent">
+                                <div class="card card-dark-blue">
+                                    <div class="card-body">
+                                        <p class="mb-4">Total Sales</p>
+                                        <p class="fs-30 mb-2" id="totalSalesLabel"></p>
+                                        <p>22.00% (30 days)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                                <div class="card card-light-blue">
+                                    <div class="card-body">
+                                        <p class="mb-4">Most Popular Item</p>
+                                        <p class="fs-30 mb-2" id="mostPopularItem"></p>
+                                        <p>2.00% (30 days)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 stretch-card transparent">
+                                <div class="card card-light-danger">
+                                    <div class="card-body">
+                                        <p class="mb-4">Most Popular Item Qty</p>
+                                        <p class="fs-30 mb-2" id="mostPopularItemQty"></p>
+                                        <p>0.22% (30 days)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
         </div>
@@ -1176,6 +1262,7 @@
 <script src="javaScript/Supplier.js"></script>
 <script src="javaScript/Weather.js"></script>
 <script src="javaScript/Refund.js"></script>
+<script src="javaScript/Admin.js"></script>
 
 
 </body>

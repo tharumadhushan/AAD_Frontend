@@ -11,14 +11,26 @@ $(document).ready(function (){
             },
             success: function (resp) {
                 for (const customer of resp) {
-                    let row = `<tr><td>${customer.customer_code}</td><td>${customer.customer_name}</td><td>${customer.gender}</td><td>${customer.join_date}</td>
-                                    <td>${customer.level}</td><td>${customer.total_points}</td><td>${customer.dob}</td><td>${customer.address}</td></tr>`;
+                    let row = `<tr>
+                        <td>${customer.customer_code}</td>
+                        <td>${customer.customer_name}</td>
+                        <td>${customer.gender}</td>
+                        <td>${customer.join_date}</td>
+                        <td>${customer.level}</td>
+                        <td>${customer.total_points}</td>
+                        <td>${customer.dob}</td>
+                        <td>${customer.address1}</td>
+                        <td>${customer.address2}</td>
+                        <td>${customer.address3}</td>
+                        <td>${customer.address4}</td>
+                        <td>${customer.address5}</td>
+                    </tr>`;
                     $("#customer-tbl-body").append(row);
                 }
-                callMethod();
+                callCustomerMethod();
             },
             error: function (xhr, status, error) {
-                alert("Error: " + error);
+                alert("Error loading customers: " + error);
             }
         });
     }
