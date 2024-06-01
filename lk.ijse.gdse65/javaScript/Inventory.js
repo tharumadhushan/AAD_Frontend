@@ -1,4 +1,3 @@
-
 const loadAllItemCode = () => {
     $('#item_code').empty();
     $('#item_code').append("<option selected>Select item code</option>");
@@ -47,7 +46,6 @@ $(document).ready(function () {
                                     <td>${item.item_code}</td>
                                     <td>${item.item_desc}</td>
                                     <td>${item.item_qty}</td>
-                                    <td>${item.item_pic}</td>
                                     <td>${item.category}</td>
                                     <td>${item.size}</td>
                                     <td>${item.unit_price_sale}</td>
