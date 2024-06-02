@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34336ff8-0e08-4289-b930-6ac4908b65c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lk.ijse.gdse65/javaScript/Customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/lk.ijse.gdse65/javaScript/Customer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lk.ijse.gdse65/javaScript/Employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/lk.ijse.gdse65/javaScript/Employee.js" afterDir="false" />
+    <list default="true" id="a1f503b6-d438-444d-bfd0-990f497fc498" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lk.ijse.gdse65/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lk.ijse.gdse65/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lk.ijse.gdse65/javaScript/Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/lk.ijse.gdse65/javaScript/Inventory.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2hI3h2qM1IJkVtMANagGc066Rfw" />
+  <component name="ProjectId" id="2hJ32ipOHGdE79EgcUayTgm9Npa" />
   <component name="ProjectViewState">
     <option name="foldersAlwaysOnTop" value="false" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,12 +29,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="34336ff8-0e08-4289-b930-6ac4908b65c6" name="Changes" comment="" />
-      <created>1717267881297</created>
+      <changelist id="a1f503b6-d438-444d-bfd0-990f497fc498" name="Changes" comment="" />
+      <created>1717298150054</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1717267881297</updated>
-      <workItem from="1717267883129" duration="1075000" />
+      <updated>1717298150054</updated>
+      <workItem from="1717298153029" duration="5560000" />
     </task>
     <servers />
   </component>

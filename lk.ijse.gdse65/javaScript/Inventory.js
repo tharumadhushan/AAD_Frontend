@@ -41,18 +41,18 @@ $(document).ready(function () {
                 "Authorization": "Bearer " + localStorage.getItem("accessToken")
             },
             success: function (resp) {
-                for (const item of resp) {
+                for (const inventory of resp) {
                     let row = `<tr>
-                                    <td>${item.item_code}</td>
-                                    <td>${item.item_desc}</td>
-                                    <td>${item.item_qty}</td>
-                                    <td>${item.category}</td>
-                                    <td>${item.size}</td>
-                                    <td>${item.unit_price_sale}</td>
-                                    <td>${item.unit_price_buy}</td>
-                                    <td>${item.expected_profit}</td>
-                                    <td>${item.profit_margin}</td>
-                                    <td>${item.status}</td>
+                                    <td>${inventory.item_code}</td>
+                                    <td>${inventory.item_desc}</td>
+                                    <td>${inventory.item_qty}</td>
+                                    <td>${inventory.category}</td>
+                                    <td>${inventory.size}</td>
+                                    <td>${inventory.unit_price_sale}</td>
+                                    <td>${inventory.unit_price_buy}</td>
+                                    <td>${inventory.expected_profit}</td>
+                                    <td>${inventory.profit_margin}</td>
+                                    <td>${inventory.status}</td>
                                 </tr>`;
                     $("#inventory-tbl-body").append(row);
                 }
@@ -69,19 +69,19 @@ $(document).ready(function () {
             let item_code = $(this).children().eq(0).text();
             let item_desc = $(this).children().eq(1).text();
             let item_qty = $(this).children().eq(2).text();
-            let item_pic = $(this).children().eq(3).text();
-            let category = $(this).children().eq(4).text();
-            let size = $(this).children().eq(5).text();
-            let unit_price_sale = $(this).children().eq(6).text();
-            let unit_price_buy = $(this).children().eq(7).text();
-            let expected_profit = $(this).children().eq(8).text();
-            let profit_margin = $(this).children().eq(9).text();
-            let status = $(this).children().eq(10).text();
+            // let item_pic = $(this).children().eq(3).text();
+            let category = $(this).children().eq(3).text();
+            let size = $(this).children().eq(4).text();
+            let unit_price_sale = $(this).children().eq(5).text();
+            let unit_price_buy = $(this).children().eq(6).text();
+            let expected_profit = $(this).children().eq(7).text();
+            let profit_margin = $(this).children().eq(8).text();
+            let status = $(this).children().eq(9).text();
 
             $("#item_code").val(item_code);
             $("#item_desc").val(item_desc);
             $("#item_qty").val(item_qty);
-            $("#item_pic").val('');  // Clear the file input
+            // $("#item_pic").val('');  // Clear the file input
             $("#categorys").val(category);
             $("#size").val(size);
             $("#unit_price_sale").val(unit_price_sale);
@@ -196,11 +196,3 @@ $(document).ready(function () {
 
     loadAllInventory();
 });
-
-
-
-
-
-
-
-
