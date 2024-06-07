@@ -27,7 +27,7 @@ $('#item_code').change((e) => {
         $('#item_desc').val(name);
     }
 });
-
+loadAllItemCode();
 $(document).ready(function () {
     loadAllItemCode();
 

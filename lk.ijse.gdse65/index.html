@@ -55,43 +55,43 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#customer" id="customer_btn">
-                    <i class="zmdi zmdi-grid"></i>
+                    <i class="zmdi zmdi-male"></i>
                     <span class="menu-title">Customer</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#employee" id="employee_btn">
-                    <i class="zmdi zmdi-grid"></i>
+                    <i class="zmdi zmdi-play-for-work"></i>
                     <span class="menu-title">Employee</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#supplier" id="supplier_btn">
-                    <i class="zmdi zmdi-grid"></i>
+                    <i class="zmdi zmdi-account-box"></i>
                     <span class="menu-title">Supplier</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#item" id="item_btn">
-                    <i class="zmdi zmdi-grid"></i>
+                    <i class="zmdi zmdi-collection-item"></i>
                     <span class="menu-title">Item</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#inventory" id="inventory_btn">
-                    <i class="zmdi zmdi-grid"></i>
+                    <i class="zmdi zmdi-collection-item-4"></i>
                     <span class="menu-title">Inventory</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#place_order" id="sale_btn">
-                    <i class="zmdi zmdi-grid"></i>
+                    <i class="zmdi zmdi-money"></i>
                     <span class="menu-title">Sales</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#refund_form" id="refund_btn">
-                    <i class="zmdi zmdi-grid"></i>
+                    <i class="zmdi zmdi-long-arrow-return"></i>
                     <span class="menu-title">Refund</span>
                 </a>
             </li>
@@ -103,7 +103,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="logout()">
-                    <i class="zmdi zmdi-grid"></i>
+                    <i class="zmdi zmdi-fullscreen-exit"></i>
                     <span class="menu-title">Logout</span>
                 </a>
             </li>
@@ -183,16 +183,16 @@
                             </div>
                         </div>
                     </div>
-                    <div id="weather">
-                        <h2>Weather Info</h2>
-                        <p id="location">Location: </p>
-                        <p id="temperature">Temperature: </p>
-                        <p id="weatherDesc">Description: </p>
-                    </div>
+                        <div id="weather">
+                            <h2>Weather Info⛅</h2>
+                            <p id="location"></p>
+                            <p id="temperature"></p>
+                            <p id="weatherDesc">Description: </p>
+                        </div>
                     <div class="col-md-6 grid-margin transparent ">
                         <div class="row" >
                             <div class="col-md-6 mb-4 stretch-card transparent">
-                                <div class="card card-tale">
+                                <div class="card card-tale dashCard">
                                     <div class="card-body">
                                         <p class="mb-4">Total Customer</p>
                                         <p class="fs-30 mb-2" id="totalCustomersLabel"></p>
@@ -201,7 +201,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 mb-4 stretch-card transparent">
-                                <div class="card card-dark-blue">
+                                <div class="card card-dark-blue dashCard">
                                     <div class="card-body">
                                         <p class="mb-4">Total Employee</p>
                                         <p class="fs-30 mb-2" id="totalEmployeesLabel"></p>
@@ -212,7 +212,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                                <div class="card card-light-blue">
+                                <div class="card card-light-blue dashCard">
                                     <div class="card-body">
                                         <p class="mb-4">Total Supplier</p>
                                         <p class="fs-30 mb-2" id="totalSuppliersLabel"></p>
@@ -221,7 +221,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 stretch-card transparent">
-                                <div class="card card-light-danger">
+                                <div class="card card-light-danger dashCard">
                                     <div class="card-body">
                                         <p class="mb-4">Total Inventory</p>
                                         <p class="fs-30 mb-2" id="totalInventorysLabel"></p>
@@ -1249,6 +1249,7 @@
 <!-- Custom scripts -->
 <script src="assets/js/app-script.js"></script>
 <script src="design/javaScript/Home%20page.js"></script>
+<script src="design/javaScript/dashboard.js"></script>
 <!-- Chart js -->
 
 <script src="assets/plugins/Chart.js/Chart.min.js"></script>

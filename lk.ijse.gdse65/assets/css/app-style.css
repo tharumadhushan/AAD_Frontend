@@ -764,6 +764,24 @@ body.bg-theme15 {
    background-color: rgba(0,0,0,.2);
 }
 
+.dashCard{
+    position: relative;
+    right: 7vw;
+    bottom: 7vw;
+}
+#totalCustomersLabel{
+    font-size: xxx-large;
+}
+#totalEmployeesLabel{
+    font-size: xxx-large;
+}
+#totalInventorysLabel{
+    font-size: xxx-large;
+}
+#totalSuppliersLabel{
+    font-size: xxx-large;
+}
+
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
@@ -788,6 +806,17 @@ body.bg-theme15 {
 .card-action a i{
 	  color: #ffffff;
     border-radius: 50%;
+}
+#location{
+    font-size: larger;
+}
+#temperature{
+    font-size: xxx-large;
+    font-weight: bold;
+}
+#weatherDesc{
+    font-style: italic;
+
 }
 
 .card-footer {

@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const temperature = data.main.temp;
             const description = data.weather[0].description;
 
-            document.getElementById('location').textContent = `Location: ${location}`;
-            document.getElementById('temperature').textContent = `Temperature: ${temperature}°C`;
+            document.getElementById('location').textContent = `${location}`;
+            document.getElementById('temperature').textContent = `${temperature}°C`;
             document.getElementById('weatherDesc').textContent = `WeatherDesc: ${description}`;
         })
         .catch(error => {

@@ -5,6 +5,10 @@
     width: 300px;
     /*margin: 50px auto;*/
     text-align: left;
+    position: relative;
+    top: 5vw;
+    left: 7vw;
+    background-color: rgba(0, 0, 0, .2);
 }
 .transparent{
     position: relative;
