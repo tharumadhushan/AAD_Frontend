@@ -260,3 +260,11 @@ $('.dropdown-toggle').on('click', () => {
         clicked = false;
     }
 });
+    function logout() {
+    // Remove the access token from local storage
+    localStorage.removeItem('accessToken');
+
+    // Redirect to the login page
+    window.location.href = "logging.html";
+}
+
