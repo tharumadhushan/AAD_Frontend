@@ -29,9 +29,9 @@ $('#employeeRef').change((e) => {
         $('#employeename').val('');
     }
 });
-
+loadAllEmployeeCode();
 $(document).ready(function() {
-    loadAllEmployeeCode();
+    // loadAllEmployeeCode();
 
     $("#process_refund").click(function () {
         let formData = {
